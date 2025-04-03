@@ -1,5 +1,6 @@
-const startTimer = document.getElementById('timerBtn');
 const timer = document.getElementById('timer');
+const startTimer = document.getElementById('timerBtn');
+const breakTimer = document.getElementById('breakBtn');
 const smTimer = document.getElementById('smTimer');
 const medTimer = document.getElementById('medTimer');
 const lgTimer = document.getElementById('lgTimer');
@@ -25,9 +26,18 @@ const startCountdown = (durationInMin) => {
         if (timeLeft === 0) {
             clearInterval(count);
             countDown.textContent = "Time for a break!";
-
-        }
-    }, 1000);
+            
+            const startBreak = document.createElement("button");
+            startBreak.classList.add('btn', "btn-Info");
+            startBreak.setAttribute('type', 'button');
+            startBreak.textContent = 'Start Break';
+            timer.appendChild(startBreak);
+    
+            startBreak.addEventListener("click", () => {
+              
+            });
+          }
+        }, 1000);
 };
 
 smTimer.addEventListener('click', () => {
@@ -37,7 +47,7 @@ smTimer.addEventListener('click', () => {
   countDown.setAttribute('id', 'countDown');
   timer.appendChild(countDown);
 
-  let minutes = 25;
+  let minutes = .3;
 
   startCountdown(minutes);
 });
