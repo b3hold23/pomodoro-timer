@@ -26,16 +26,6 @@ const startCountdown = (durationInMin) => {
         if (timeLeft === 0) {
             clearInterval(count);
             countDown.textContent = "Time for a break!";
-            
-            const startBreak = document.createElement("button");
-            startBreak.classList.add('btn', "btn-Info");
-            startBreak.setAttribute('type', 'button');
-            startBreak.textContent = 'Start Break';
-            timer.appendChild(startBreak);
-    
-            startBreak.addEventListener("click", () => {
-              
-            });
           }
         }, 1000);
 };

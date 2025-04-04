@@ -21,18 +21,27 @@
         <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  id="timerBtn">Start Timer</button>
     </div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
+    <div class="modal faded modal-dialog" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdrop">Select a duration:</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdrop">Select Study Time:</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="smTimer">25/5</button>
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="medTimer">30/10</button>
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="lgTimer">45/15</button>
-                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="xlTimer">60/20</button>
+                <div class="modal-body" id="studyTimer">
+                    <button type="button" class="btn btn-info" id="smTimer">25</button>
+                    <button type="button" class="btn btn-info" id="medTimer">30</button>
+                    <button type="button" class="btn btn-info" id="lgTimer">45</button>
+                    <button type="button" class="btn btn-info" id="xlTimer">60</button>
+                </div>
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdrop">Select a duration:</h1>
+                </div>
+                <div class="modal-body" id="breakTimer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="smBreak">5</button>
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="medBreak">10</button>
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="lgBreak">15</button>
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="xlBreak">20</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
